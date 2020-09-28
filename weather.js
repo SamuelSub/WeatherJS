@@ -6,9 +6,15 @@ class Weather {
   async getWeather(city) {
     const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${this.apiKey}`);
 
-    const responseData = await response.json();
+    if(response.status === 404) {
+      console.log('City Not found')
+    } else {
+      const responseData = await response.json();
 
-    return responseData
+      return responseData
+    }
+
+    
   }
   
 }

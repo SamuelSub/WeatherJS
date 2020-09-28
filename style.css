@@ -1,0 +1,13 @@
+#search-city {
+  display: grid;
+  margin: auto;
+  width: 30vw;
+  margin-top: 2em;
+}
+
+.weather-list {
+  display: grid;
+  margin: auto;
+  width: 30vw;
+  margin-top: 2em;
+}
