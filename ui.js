@@ -1,13 +1,12 @@
-const temp = document.querySelector('.temp');
-const feels = document.querySelector('.feels');
-const humidity = document.querySelector('.humid');
+
 const list = document.querySelector('.list-holder');
 
 class UI {
   constructor() {
-
+    this.temp = document.querySelector('.temp');
+    this.feels = document.querySelector('.feels');
+    this.humid = document.querySelector('.humid');
   }
-
   displayWeather(data) {
     if(data === undefined) {
       list.innerHTML = `<ul class="weather-list list-group">
@@ -36,6 +35,10 @@ class UI {
       console.log(data);
     }
    
+  }
+
+  changeBackground() {
+    document.body.style.background = '#4949FF';
   }
 
 }
