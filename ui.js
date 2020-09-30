@@ -6,6 +6,7 @@ class UI {
     this.temp = document.querySelector('.temp');
     this.feels = document.querySelector('.feels');
     this.humid = document.querySelector('.humid');
+    this.tempImg = document.querySelector('.temp-icon');
   }
   displayWeather(data) {
     if(data === undefined) {
@@ -21,9 +22,10 @@ class UI {
       </li>
       </ul>`
     } else {
+      
        list.innerHTML = `<ul class="weather-list list-group">
       <li class="temp list-group-item d-flex justify-content-between align-items-center">
-        Temperature: ${data.temp}
+        Temperature: ${data.temp} 
       </li>
       <li class="feels list-group-item d-flex justify-content-between align-items-center">
         Feels Like: ${data.feels_like}
@@ -31,14 +33,14 @@ class UI {
       <li class="humid list-group-item d-flex justify-content-between align-items-center">
         Humidity: ${data.humidity}
       </li>
-      </ul>`
-      console.log(data);
+      </ul>`;
     }
-   
   }
 
   changeBackground() {
-    document.body.style.background = '#4949FF';
+    // document.body.style.background = '#4949FF';
+    
+    
   }
 
 }
