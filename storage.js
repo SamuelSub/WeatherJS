@@ -5,7 +5,7 @@ class Store {
 
   set(data) {
     localStorage.setItem('temp', data.temp);
-    localStorage.setItem('feels-like', data.feelsLike);
+    localStorage.setItem('feels-like', data.feels_like);
     localStorage.setItem('humidity', data.humidity);
   }
 }
