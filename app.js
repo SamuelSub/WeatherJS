@@ -1,9 +1,14 @@
-const searchCity = document.querySelector('#search-city');
+window.addEventListener('DOMContentLoaded', () => {
+  ui.displayWeather(storage.get());
+});
 
+const searchCity = document.querySelector('#search-city');
 
 const weather = new Weather();
 const ui = new UI();
 const storage = new Store();
+
+
 
 searchCity.addEventListener('keyup', function(e) {
   weather.getWeather(e.target.value)
@@ -15,6 +20,8 @@ searchCity.addEventListener('keyup', function(e) {
   .catch(err => console.log());
   
 })
+
+
 
 let placesAutocomplete = places({
   appId: 'plOYZHPXK9IO',

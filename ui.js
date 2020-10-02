@@ -1,5 +1,6 @@
 
 const list = document.querySelector('.list-holder');
+const city = document.querySelector('#inputLarge');
 
 class UI {
   constructor() {
@@ -24,6 +25,7 @@ class UI {
     } else {
       
        list.innerHTML = `<ul class="weather-list list-group">
+       <h2>${city.value}</h2>
       <li class="temp list-group-item d-flex justify-content-between align-items-center">
         Temperature: ${data.temp} 
       </li>

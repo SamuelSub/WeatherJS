@@ -13,10 +13,7 @@ class Weather {
 
       return responseData
     }
-
-    
   }
-  
 }
 
 
