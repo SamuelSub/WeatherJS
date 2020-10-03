@@ -1,6 +1,5 @@
 
 const list = document.querySelector('.list-holder');
-const city = document.querySelector('#inputLarge');
 
 class UI {
   constructor() {
@@ -9,7 +8,7 @@ class UI {
     this.humid = document.querySelector('.humid');
     this.tempImg = document.querySelector('.temp-icon');
   }
-  displayWeather(data) {
+  displayWeather(data,city) {
     if(data === undefined) {
       list.innerHTML = `<ul class="weather-list list-group">
       <li class="temp list-group-item d-flex justify-content-between align-items-center">
@@ -25,7 +24,7 @@ class UI {
     } else {
       
        list.innerHTML = `<ul class="weather-list list-group">
-       <h2>${city.value}</h2>
+       <h2>${city}</h2>
       <li class="temp list-group-item d-flex justify-content-between align-items-center">
         Temperature: ${data.temp} 
       </li>

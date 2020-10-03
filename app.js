@@ -13,9 +13,9 @@ const storage = new Store();
 searchCity.addEventListener('keyup', function(e) {
   weather.getWeather(e.target.value)
   .then(data => {
-    ui.displayWeather(data.main);
+    ui.displayWeather(data.main,data.name);
     ui.changeBackground();
-    storage.set(data.main);
+    storage.set(data.main,data.name);
   })
   .catch(err => console.log());
   
