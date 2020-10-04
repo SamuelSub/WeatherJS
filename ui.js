@@ -38,10 +38,19 @@ class UI {
     }
   }
 
-  changeBackground() {
-    // document.body.style.background = '#4949FF';
-    
-    
-  }
+    displayAfterRefresh(data) {
+      list.innerHTML = `<ul class="weather-list list-group">
+      <h2>${data.city}</h2>
+     <li class="temp list-group-item d-flex justify-content-between align-items-center">
+       Temperature: ${data.temp} 
+     </li>
+     <li class="feels list-group-item d-flex justify-content-between align-items-center">
+       Feels Like: ${data.feels_like}
+     </li>
+     <li class="humid list-group-item d-flex justify-content-between align-items-center">
+       Humidity: ${data.humidity}
+     </li>
+     </ul>`;
+    }
 
 }

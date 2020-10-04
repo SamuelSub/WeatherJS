@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-  ui.displayWeather(storage.get());
+  ui.displayAfterRefresh(storage.get());
 });
 
 const searchCity = document.querySelector('#search-city');
