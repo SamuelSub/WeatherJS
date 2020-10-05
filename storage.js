@@ -1,13 +1,16 @@
 class Store {
-  constructor() {
-    
+  constructor(temp,feels_like,humidity,city) {
+    this.temp = temp;
+    this.feels = feels_like;
+    this.humidity = humidity;
+    this.city = city;
   }
 
-  set(data,city) {
-    localStorage.setItem('temp', data.temp);
-    localStorage.setItem('feels-like', data.feels_like);
-    localStorage.setItem('humidity', data.humidity);
-    localStorage.setItem('city',city);
+  set() {
+    localStorage.setItem('temp', this.temp);
+    localStorage.setItem('feels-like', this.feels);
+    localStorage.setItem('humidity', this.humidity);
+    localStorage.setItem('city', this.city);
   }
 
   get() {
